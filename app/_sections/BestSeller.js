@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Heading from "../_components/Heading";
 import { bestSellers } from "../_constants/data";
-import BestSellerCard from "../_components/BestSellerCard";
+import ProductCard from "../_components/ProductCard";
 
 export default function BestSeller() {
   return (
@@ -11,16 +11,16 @@ export default function BestSeller() {
       <Heading label="Best Sellers" />
 
       {/* Products */}
-      <div className="mt-[3.2rem] grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-5 gap-[1.6rem]">
+      <div className="mt-[3.2rem] grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-4 gap-[1.6rem]">
         {bestSellers.map((product) => (
-          <BestSellerCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
       <div className="flex mt-20 items-center justify-center">
         <Link
           href="/shop"
-          className="text-2xl text-brand-blue hover:underline border border-blue border-2 p-4"
+          className="text-2xl text-brand-blue hover:underline border border-blue border-2 px-4 py-2"
         >
           See more &darr;
         </Link>

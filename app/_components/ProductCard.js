@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-function BestSellerCard({ product }) {
+function ProductCard({ product }) {
   return (
-    <div className="bg-white rounded-[1.2rem] p-[1.2rem] shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group">
+    <div className="bg-white p-[1.2rem] shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group">
       {/* Image */}
       <div className="w-full h-[12rem] flex items-center justify-center mb-[1rem]">
         <Image
@@ -27,7 +27,7 @@ function BestSellerCard({ product }) {
       <button
         // type="button"
         // onClick={() => onAddToCart?.(product)}
-        className="mt-6 w-full rounded-[1rem] bg-brand-blue px-4 py-3 text-[1.3rem] font-semibold text-white hover:bg-[#1663b1] transition-colors duration-300"
+        className="mt-6 w-full bg-brand-blue px-4 py-3 text-[1.3rem] font-semibold text-white hover:bg-[#1663b1] transition-colors duration-300"
       >
         Add to cart
       </button>
@@ -35,4 +35,4 @@ function BestSellerCard({ product }) {
   );
 }
 
-export default BestSellerCard;
+export default ProductCard;

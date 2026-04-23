@@ -88,3 +88,54 @@ export const bestSellers = [
     image: "/images/quest-3.png",
   },
 ];
+
+export const featuredProducts = [
+  {
+    id: 1,
+    name: "iPhone 14 Pro Max",
+    price: 1150000,
+    image: "/images/alienware-backview-1.png",
+  },
+  {
+    id: 2,
+    name: "Samsung Galaxy Z Fold",
+    price: 1350000,
+    image: "/images/alienware-headset.png",
+  },
+  {
+    id: 3,
+    name: "MacBook Pro M2",
+    price: 1850000,
+    image: "/images/asus-gaming-laptop-1.png",
+  },
+  {
+    id: 4,
+    name: "Dell XPS 13",
+    price: 1250000,
+    image: "/images/fifa-26.png",
+  },
+  {
+    id: 5,
+    name: "Sony WH-1000XM5",
+    price: 180000,
+    image: "/images/gaming-monitor-curve.png",
+  },
+  {
+    id: 6,
+    name: "Apple Watch Series 8",
+    price: 420000,
+    image: "/images/quest-3.png",
+  },
+  {
+    id: 7,
+    name: "iPad Pro",
+    price: 980000,
+    image: "/images/switch.png",
+  },
+  {
+    id: 8,
+    name: "Gaming Monitor 144Hz",
+    price: 320000,
+    image: "/images/x-box.png",
+  },
+];
