@@ -8,16 +8,6 @@ export default function FeaturedSection() {
     <section className="max-w-[130rem] m-auto py-[9.6rem] px-[2rem] md:px-[9rem]">
       {/* Header */}
       <Heading label="Featured Products" />
-      {/* <div className="flex items-center justify-between">
-
-        <Link
-          href="/shop"
-          className="text-[1.4rem] text-[var(--color-brand-blue)] hover:underline"
-        >
-          See more
-        </Link>
-      </div> */}
-
       {/* Products */}
       <div className="mt-[3.2rem] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[2.4rem]">
         {featuredProducts.map((product) => (

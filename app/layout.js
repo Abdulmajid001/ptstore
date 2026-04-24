@@ -1,6 +1,8 @@
 import { Urbanist, Orbitron } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
+import MobileNav from "./_components/MobileNav";
+import Footer from "./_sections/Footer";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -14,10 +16,10 @@ const orbitron = Orbitron({
 
 export const metadata = {
   title: {
-    default: "Vigorware",
-    template: "%s – Vigorware",
+    default: "Ptstore",
+    template: "%s – Ptstore",
   },
-  description: "Vigorware ecommerce store",
+  description: "Ptstore ecommerce store",
 };
 
 export default function RootLayout({ children }) {
@@ -26,6 +28,8 @@ export default function RootLayout({ children }) {
       <body className={`${urbanist.className}`}>
         <Header />
         <main>{children}</main>
+        <MobileNav />
+        <Footer />
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ import ProductCard from "../_components/ProductCard";
 
 export default function BestSeller() {
   return (
-    <section className="max-w-[130rem] m-auto py-[9.6rem] px-[2rem] md:px-[9rem]">
+    <section className="max-w-[130rem] m-auto px-[2rem] md:px-[9rem]">
       {/* Header */}
       <Heading label="Best Sellers" />
 

@@ -1,53 +1,88 @@
-import Image from 'next/image';
-import SocialIcons from '../_components/SocialIcons';
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { FaXTwitter } from 'react-icons/fa6';
+import Link from "next/link";
 
-const socials = [
-  {
-    icon: <FaLinkedin />,
-    href: "https://www.linkedin.com/in/abdulmajid-hope-839402280",
-    color: "hover:text-blue-600",
-    label: "Linkedin"
-  },
-  {
-    icon: <FaGithub />,
-    href: "https://github.com/abdulmajid001",
-    label: "Github"
-  },
-  {
-    icon: <FaInstagram />,
-    href: "https://instagram.com/abdulmajid_hope",
-    color: "hover:text-pink-500",
-    label: "Instagram"
-  },
-  {
-    icon: <HiOutlineMail />,
-    href: "mailto:abdulmajidhope@gmail.com",
-    color: "hover:text-red-500",
-    label: "Email"
-  },
-  {
-    icon: <FaXTwitter />,
-    href: "https://x.com/MajidHope",
-    color: "hover:text-sky-500",
-    label: "X (Twitter)"
-  }
-];
+const footerLinks = {
+  shop: [
+    { name: "Laptops", href: "/shop/laptops" },
+    { name: "Smartphones", href: "/shop/phones" },
+    { name: "Accessories", href: "/shop/accessories" },
+    { name: "Gaming", href: "/shop/gaming" },
+  ],
+  support: [
+    { name: "Contact Us", href: "/contact" },
+    { name: "Order Tracking", href: "/orders" },
+    { name: "Returns & Refunds", href: "/returns" },
+    { name: "FAQs", href: "/faq" },
+  ],
+  legal: [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Shipping Policy", href: "/shipping" },
+  ],
+};
 
-function Footer() {
+const FooterLink = ({ href, children }) => (
+  <Link
+    href={href}
+    className="relative inline-block text-[1.3rem] text-[rgba(247,248,250,0.88)] cursor-pointer transition-colors duration-300 hover:text-white group"
+  >
+    {children}
+    <span className="absolute bottom-[-4px] left-0 w-0 h-[2px] bg-gradient-to-r from-brand-blue to-white group-hover:w-full transition-all duration-500 ease-out"></span>
+  </Link>
+);
+
+export default function Footer() {
   return (
-    <footer className="bg-brand-dark text-brand-light pt-[4rem] pb-[9rem] md:pb-[4rem]">
-      <div className="max-w-[130rem] mx-auto px-4">
-        <Image src="/Logo-icon-light.png" alt="Abdulmajid Hope Logo" width={60} height={60} className="mx-auto mb-9"/>
-        <p className="text-center text-xl sm:text-2xl pb-6">
-          &copy; {new Date().getFullYear()} Abdulmajid Hope. All rights reserved.
-        </p>
-        <SocialIcons socialArr={socials} />
+    <footer className="max-w-[130rem] m-auto py-[6.4rem] px-[2rem] md:px-[9rem] bg-brand-dark text-brand-light shadow-[0_-20px_60px_-40px_rgba(0,0,0,0.6)] pb-[9rem] md:pb-[4rem]">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-[3.2rem]">
+        {/* Brand */}
+        <div>
+          <h3 className="text-[2rem] font-semibold mb-[1rem]">PTStore</h3>
+          <p className="text-[1.3rem] leading-[1.6] text-[rgba(247,248,250,0.88)]">
+            Making your tech shopping simple, fast, and reliable.
+          </p>
+        </div>
+
+        {/* Shop */}
+        <div>
+          <h4 className="text-2xl font-bold mb-[1.2rem]">Shop</h4>
+          <ul className="space-y-[0.8rem]">
+            {footerLinks.shop.map((link) => (
+              <li key={link.name}>
+                <FooterLink href={link.href}>{link.name}</FooterLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Support */}
+        <div>
+          <h4 className="text-2xl font-bold mb-[1.2rem]">Support</h4>
+          <ul className="space-y-[0.8rem]">
+            {footerLinks.support.map((link) => (
+              <li key={link.name}>
+                <FooterLink href={link.href}>{link.name}</FooterLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h4 className="text-2xl font-bold mb-[1.2rem]">Legal</h4>
+          <ul className="space-y-[0.8rem]">
+            {footerLinks.legal.map((link) => (
+              <li key={link.name}>
+                <FooterLink href={link.href}>{link.name}</FooterLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="mt-[4rem] border-t border-[rgba(255,255,255,0.12)] pt-[2rem] text-[1.2rem] text-[rgba(247,248,250,0.7)] text-center">
+        © {new Date().getFullYear()} PTStore. All rights reserved.
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer
