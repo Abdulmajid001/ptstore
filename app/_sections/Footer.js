@@ -8,15 +8,15 @@ const footerLinks = {
     { name: "Gaming", href: "/shop/gaming" },
   ],
   support: [
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact Us", href: "/contact-us" },
     { name: "Order Tracking", href: "/orders" },
-    { name: "Returns & Refunds", href: "/returns" },
-    { name: "FAQs", href: "/faq" },
+    { name: "Returns & Refunds", href: "/return-refund" },
+    { name: "FAQs", href: "/faqs" },
   ],
   legal: [
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms" },
-    { name: "Shipping Policy", href: "/shipping" },
+    { name: "Shipping Policy", href: "/shipping-policy" },
   ],
 };
 
@@ -82,7 +82,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="mt-[4rem] border-t border-[rgba(255,255,255,0.12)] pt-8 text-[1.2rem] text-[rgba(247,248,250,0.7)] text-center">
         {/* © {new Date().getFullYear()} PTStore. All rights reserved. */}
-        &copy; 2026 PTStore. All rights reserved.
+        &copy; 2026 PT-World. All rights reserved.
       </div>
     </footer>
   );

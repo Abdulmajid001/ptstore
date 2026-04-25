@@ -13,7 +13,7 @@ export default function MobileNav() {
 
   const navItems = [
     { name: "/", label: "Home", icon: HiHome },
-    { name: "/shop", label: "Store", icon: HiShoppingBag },
+    { name: "/shop", label: "Shop", icon: HiShoppingBag },
     { name: "/track-order", label: "Track Order", icon: HiMiniMagnifyingGlass },
     { name: "/account", label: "Account", icon: HiUserCircle },
   ];

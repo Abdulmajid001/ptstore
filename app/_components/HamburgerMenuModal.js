@@ -104,6 +104,7 @@ export default function HamburgerMenuModal({ open, onClose }) {
 
 // import Link from "next/link";
 // import { useEffect, useRef } from "react";
+// import { usePathname } from "next/navigation";
 // import { gsap } from "gsap";
 
 // const menuItems = [
@@ -118,6 +119,7 @@ export default function HamburgerMenuModal({ open, onClose }) {
 // export default function HamburgerMenuModal({ open, onClose }) {
 //   const overlayRef = useRef(null);
 //   const itemRefs = useRef([]);
+//   const pathname = usePathname();
 
 //   useEffect(() => {
 //     const overlay = overlayRef.current;
@@ -166,21 +168,34 @@ export default function HamburgerMenuModal({ open, onClose }) {
 //           : "pointer-events-none opacity-0 invisible"
 //       }`}
 //     >
+//       {/* backdrop */}
 //       <div className="absolute inset-0" onClick={onClose} />
 
-//       <aside className="pt-[9.6rem] relative flex h-full w-[min(80vw,40rem)] max-w-[70vw] flex-col gap-8  p-8 shadow-[0_40px_90px_-50px_rgba(15,23,42,0.95)] backdrop-blur-2xl">
+//       {/* menu */}
+//       <aside className="pt-[9.6rem] relative flex h-full w-[min(80vw,40rem)] max-w-[70vw] flex-col gap-8 p-8 shadow-[0_40px_90px_-50px_rgba(15,23,42,0.95)] backdrop-blur-2xl">
 //         <div className="grid gap-3">
-//           {menuItems.map(({ href, label }, index) => (
-//             <Link
-//               key={label}
-//               href={href}
-//               className="block rounded-4xl px-6 py-3 text-2xl font-semibold  transition duration-300 hover:-translate-x-1 hover:bg-brand-blue/95 hover:text-brand-light"
-//               onClick={onClose}
-//               ref={(el) => (itemRefs.current[index] = el)}
-//             >
-//               {label}
-//             </Link>
-//           ))}
+//           {menuItems.map(({ href, label }, index) => {
+//             const isActive =
+//               href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+//             return (
+//               <Link
+//                 key={label}
+//                 href={href}
+//                 className={`block rounded-4xl px-6 py-3 text-2xl font-semibold transition duration-300
+//                   ${
+//                     isActive
+//                       ? "bg-brand-blue text-brand-light"
+//                       : "hover:-translate-x-1 hover:bg-brand-blue/95 hover:text-brand-light"
+//                   }
+//                 `}
+//                 onClick={onClose}
+//                 ref={(el) => (itemRefs.current[index] = el)}
+//               >
+//                 {label}
+//               </Link>
+//             );
+//           })}
 //         </div>
 //       </aside>
 //     </div>

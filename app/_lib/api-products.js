@@ -3,7 +3,6 @@ import { supabase } from "./supabase";
 export async function getAllProducts() {
   const { data, error } = await supabase
     .from("products")
-    // .select("id,name,brand,price, image, category")
     .select("id,name,brand,price,category")
     .order("name", { ascending: true });
 
@@ -33,11 +32,11 @@ export async function getProduct(productId) {
   return data;
 }
 
-export async function getNikeProducts() {
+export async function getLaptops() {
   const { data, error } = await supabase
     .from("products")
-    .select("id,name,brand,price,brand, image")
-    .eq("brand", "Nike")
+    .select("id,name,brand,price,image,category")
+    .eq("category", "laptop")
     .order("name", { ascending: true });
 
   if (error) {
@@ -47,11 +46,11 @@ export async function getNikeProducts() {
   return data;
 }
 
-export async function getNewBalanceProducts() {
+export async function getSmartphones() {
   const { data, error } = await supabase
     .from("products")
-    .select("id,name,brand,price,brand, image")
-    .eq("brand", "New Balance")
+    .select("id,name,brand,price,image,category")
+    .eq("category", "smartphone")
     .order("name", { ascending: true });
 
   if (error) {
@@ -61,78 +60,44 @@ export async function getNewBalanceProducts() {
   return data;
 }
 
-export async function getAdidasProducts() {
+export async function getAccessories() {
   const { data, error } = await supabase
     .from("products")
-    .select("id,name,brand,price,brand, image")
-    .eq("brand", "Adidas")
+    .select("id,name,brand,price,image,category")
+    .eq("category", "accessories")
     .order("name", { ascending: true });
 
   if (error) {
-    throw new Error(error.message);
-  }
-  return data;
-}
-
-export async function getPumaProducts() {
-  const { data, error } = await supabase
-    .from("products")
-    .select("id,name,brand,price,brand, image")
-    .eq("brand", "Puma")
-    .order("name", { ascending: true });
-
-  if (error) {
-    throw new Error(error.message);
-  }
-  return data;
-}
-
-export async function getReebokProducts() {
-  const { data, error } = await supabase
-    .from("products")
-    .select("id,name,brand,price,brand, image")
-    .eq("brand", "Reebok")
-    .order("name", { ascending: true });
-
-  if (error) {
-    throw new Error(error.message);
-  }
-  return data;
-}
-
-export async function getBrandProducts(brandFilter) {
-  // console.log(brandFilter)
-  let query = supabase
-    .from("products")
-    .select("id, name, brand, price, image")
-    .order("name", { ascending: true });
-
-  if (brandFilter && brandFilter !== "All") {
-    query = query.eq("brand", brandFilter);
-  }
-
-  const { data, error } = await query;
-
-  // await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulate network delay
-
-  if (error) {
-    console.error(error);
     throw new Error(error.message);
   }
 
   return data;
 }
 
-export async function getFeaturedProducts() {
+export async function getGaming() {
   const { data, error } = await supabase
     .from("products")
-    .select("id,name,brand,price,image")
-    .eq("isFeaturedProd", true)
-    .order("created_at", { ascending: true })
-    .limit(10);
+    .select("id,name,brand,price,image,category")
+    .eq("category", "gaming")
+    .order("name", { ascending: true });
 
   if (error) {
     throw new Error(error.message);
   }
+
+  return data;
+}
+
+export async function getDesktop() {
+  const { data, error } = await supabase
+    .from("products")
+    .select("id,name,brand,price,image,category")
+    .eq("category", "desktop")
+    .order("name", { ascending: true });
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
   return data;
 }

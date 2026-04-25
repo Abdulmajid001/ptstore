@@ -12,6 +12,7 @@ function ProductCard({ product }) {
           alt={product.name}
           width={120}
           height={120}
+          loading="eager"
           className="object-contain group-hover:scale-105 transition-transform duration-300"
         />
       </div>

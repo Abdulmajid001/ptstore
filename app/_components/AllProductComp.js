@@ -11,7 +11,9 @@ export default async function AllProductComp() {
 
   if (!products || products.length === 0) {
     return (
-      <p className="text-center text-gray-500 text-2xl md:text-4xl min-h-screen">No products found.</p>
+      <p className="text-center text-gray-500 text-2xl md:text-4xl min-h-[90vh] ">
+        No products found.
+      </p>
     );
   }
 
