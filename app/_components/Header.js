@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaOpencart } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import HamburgerMenuModal from "./HamburgerMenuModal";
+import { RiShoppingBag2Line } from "react-icons/ri";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,13 +23,10 @@ function Header() {
             href="/cart"
             className="relative flex items-center justify-center group w-16 h-16 md:w-18 md:h-18 rounded-3xl border border-slate-300/25 bg-white/90 text-slate-900 shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue/60"
           >
-            <FaOpencart className="text-4xl text-slate-950" />
+            <RiShoppingBag2Line className="text-4xl text-slate-950" />
 
-            <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-xs font-semibold text-white shadow-sm shadow-red-500/40">
+            <span className="absolute -top-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-lg md:text-xl font-semibold text-white shadow-sm shadow-red-500/40">
               6
-            </span>
-            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[0.65rem] uppercase tracking-[0.2em] text-slate-700">
-              cart
             </span>
           </Link>
 
