@@ -8,11 +8,11 @@ export default function CategorySection() {
       {/* Header */}
       <Heading label="Categories" />
       <div className="mt-[3.2rem] relative">
-        <div className="flex pb-5 md:grid md:grid-cols-3 lg:grid-cols-5 gap-[1.6rem] overflow-x-auto md:overflow-visible overflow-y-hidden scroll-smooth snap-x snap-mandatory md:justify-center ">
+        <div className="flex pb-5 md:grid md:grid-cols-3 lg:grid-cols-5 gap-1 md:gap-[1.6rem] overflow-x-auto md:overflow-visible overflow-y-hidden scroll-smooth snap-x snap-mandatory md:justify-center ">
           {categories.map((category) => (
             <div
               key={category.id}
-              className=" min-w-[11rem] md:min-w-0 flex flex-col items-center cursor-pointer group snap-start"
+              className=" min-w-[10rem] md:min-w-0 flex flex-col items-center cursor-pointer group snap-start"
             >
               {/* Card */}
               <div className="w-[9rem] h-[6rem] md:w-full md:h-[8rem] rounded-[1.2rem] bg-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-[2px]">
