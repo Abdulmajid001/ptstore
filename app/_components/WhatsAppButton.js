@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
   const btnRef = useRef(null);
   const iconRef = useRef(null);
 
-  const phoneNumber = "2348143524819"; // International format
+  const phoneNumber = "2348063014326"; // International format
   const message = "Hello! I'm interested in your sneakers.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message,
