@@ -16,10 +16,12 @@ function Header() {
           <span className="font-bold text-3xl tracking-tight">PT Store</span>
         </Link>
 
+        {/* Right Section */}
         <div className="flex items-center gap-4">
+          {/* Cart Icon */}
           <Link
             href="/cart"
-            className="relative flex items-center justify-center group h-14 w-14  rounded-3xl border border-slate-300/25 bg-white/90 text-slate-900 shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue/60"
+            className="relative flex items-center justify-center group w-16 h-16 md:w-18 md:h-18 rounded-3xl border border-slate-300/25 bg-white/90 text-slate-900 shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue/60"
           >
             <FaOpencart className="text-4xl text-slate-950" />
 
@@ -31,12 +33,13 @@ function Header() {
             </span>
           </Link>
 
+          {/* Hamburger Button */}
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((current) => !current)}
-            className={`group inline-flex h-14 w-14 items-center justify-center rounded-3xl border border-slate-300/25 bg-white/90 text-slate-900 shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue/60 ${
+            className={`group inline-flex w-16 h-16 md:w-18 md:h-18 items-center justify-center rounded-3xl border border-slate-300/25 bg-white/90 text-slate-900 shadow-xl shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue/60 ${
               menuOpen ? "scale-110 rotate-12" : ""
             }`}
           >

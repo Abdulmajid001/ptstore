@@ -10,7 +10,7 @@ const menuItems = [
   { label: "Collections", href: "/collections" },
   { label: "Account", href: "/account" },
   { label: "Contact", href: "/contact" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
 ];
 
 export default function HamburgerMenuModal({ open, onClose }) {
