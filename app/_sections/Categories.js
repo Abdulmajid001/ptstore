@@ -12,20 +12,15 @@ export default function CategorySection() {
           {categories.map((category) => (
             <div
               key={category.id}
-              className="
-          min-w-[11rem] md:min-w-0 
-          flex flex-col items-center 
-          cursor-pointer group 
-          snap-start
-        "
+              className=" min-w-[11rem] md:min-w-0 flex flex-col items-center cursor-pointer group snap-start"
             >
               {/* Card */}
-              <div className="w-[11rem] h-[9rem] md:w-full md:h-[10rem] rounded-[1.2rem] bg-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-[2px]">
+              <div className="w-[9rem] h-[6rem] md:w-full md:h-[8rem] rounded-[1.2rem] bg-white flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-[2px]">
                 <Image
                   src={category.image}
                   alt={category.name}
-                  width={70}
-                  height={70}
+                  width={60}
+                  height={60}
                   className="object-contain"
                 />
               </div>

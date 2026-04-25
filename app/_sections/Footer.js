@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-[3.2rem]">
         {/* Brand */}
         <div>
-          <h3 className="text-[2rem] font-semibold mb-[1rem]">PTStore</h3>
+          <h3 className="text-[2rem] font-semibold mb-[1rem]">PT World</h3>
           <p className="text-[1.3rem] leading-[1.6] text-[rgba(247,248,250,0.88)]">
             Making your tech shopping simple, fast, and reliable.
           </p>
@@ -82,7 +82,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="mt-[4rem] border-t border-[rgba(255,255,255,0.12)] pt-8 text-[1.2rem] text-[rgba(247,248,250,0.7)] text-center">
         {/* © {new Date().getFullYear()} PTStore. All rights reserved. */}
-        &copy; 2026 PT-World. All rights reserved.
+        &copy; 2026 PTWorld. All rights reserved.
       </div>
     </footer>
   );
