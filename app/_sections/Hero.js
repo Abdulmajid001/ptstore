@@ -19,13 +19,13 @@ function Hero() {
           Shop with confidence and stay ahead.
         </p>
         <div className="md:block mt-4">
-          <Button text="Shop now &rarr;" href="#product" />
+          <Button text="Shop now &rarr;" href="/shop" />
         </div>
       </div>
       <div className="relative aspect-square w-[80%] md:w-[90%] mx-auto">
         <Image
           fill
-          src="/images/alienware-slant-img.png"
+          src="/gadgets-hero-2.png"
           alt="Vigorware collection"
           className="object-contain"
         />
