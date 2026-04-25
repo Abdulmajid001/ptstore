@@ -56,9 +56,9 @@ export default function WhatsAppButton() {
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
       className="
-        fixed bottom-28 right-8 md:right-10 z-50
+        fixed bottom-32 right-8 md:right-10 z-50
         flex items-center justify-center
-        w-14 h-14 md:w-16 md:h-16
+        w-16 h-16 md:w-18 md:h-18
         rounded-full bg-green-500 text-white
         shadow-xl
       "
