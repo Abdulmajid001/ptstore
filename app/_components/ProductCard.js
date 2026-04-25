@@ -8,7 +8,7 @@ function ProductCard({ product }) {
       <div className="w-full h-[12rem] flex items-center justify-center mb-[1rem]">
         <Image
           // src={product.image}
-          src="./images/quest-3.png"
+          src="/quest-3.png"
           alt={product.name}
           width={120}
           height={120}
