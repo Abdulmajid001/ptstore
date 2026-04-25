@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
   const phoneNumber = "2348143524819"; // International format
   const message = "Hello! I'm interested in your sneakers.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message
+    message,
   )}`;
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
         duration: 2,
         repeat: -1,
         ease: "power1.out",
-      }
+      },
     );
   }, []);
 
@@ -56,14 +56,14 @@ export default function WhatsAppButton() {
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
       className="
-        fixed bottom-28 right-6 md:right-10 z-50
+        fixed bottom-28 right-8 md:right-10 z-50
         flex items-center justify-center
         w-14 h-14 md:w-16 md:h-16
         rounded-full bg-green-500 text-white
         shadow-xl
       "
     >
-      <FaWhatsapp ref={iconRef} className="text-3xl md:text-4xl" />
+      <FaWhatsapp ref={iconRef} className="text-4xl md:text-5xl" />
     </a>
   );
 }

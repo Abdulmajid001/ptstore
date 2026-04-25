@@ -4,7 +4,7 @@ import Heading from "../_components/Heading";
 
 export default function CategorySection() {
   return (
-    <section className="max-w-[130rem] m-auto px-[2rem] md:px-[9rem]">
+    <section className="max-w-[130rem] m-auto px-[2rem] md:px-[9rem] pb-[9.6rem]  ">
       {/* Header */}
       <Heading label="Categories" />
       <div className="mt-[3.2rem] relative">

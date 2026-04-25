@@ -80,8 +80,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="mt-[4rem] border-t border-[rgba(255,255,255,0.12)] pt-[2rem] text-[1.2rem] text-[rgba(247,248,250,0.7)] text-center">
-        © {new Date().getFullYear()} PTStore. All rights reserved.
+      <div className="mt-[4rem] border-t border-[rgba(255,255,255,0.12)] pt-8 text-[1.2rem] text-[rgba(247,248,250,0.7)] text-center">
+        {/* © {new Date().getFullYear()} PTStore. All rights reserved. */}
+        &copy; 2026 PTStore. All rights reserved.
       </div>
     </footer>
   );

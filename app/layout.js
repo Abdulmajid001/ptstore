@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import MobileNav from "./_components/MobileNav";
 import Footer from "./_sections/Footer";
+import WhatsAppButton from "./_components/WhatsAppButton";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${urbanist.className}`}>
         <Header />
         <main>{children}</main>
+        <WhatsAppButton />
         <MobileNav />
         <Footer />
       </body>

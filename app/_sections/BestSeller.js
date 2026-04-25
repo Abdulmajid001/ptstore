@@ -20,7 +20,7 @@ export default function BestSeller() {
       <div className="flex mt-20 items-center justify-center">
         <Link
           href="/shop"
-          className="text-2xl text-brand-blue hover:underline border border-blue border-2 px-4 py-2"
+          className="text-2xl text-brand-blue hover:underline border-blue border-2 px-4 py-2"
         >
           See more &darr;
         </Link>
